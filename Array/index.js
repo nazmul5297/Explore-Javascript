@@ -1,4 +1,5 @@
 const prompt = require("prompt-sync")({ sigint: true });
+const ArrayAtDemonstation = require("./arrayAt.js");
 
 console.log("Hi Here We Expore JavaScript Array and different Method");
 const methodObject = [
@@ -145,10 +146,12 @@ const methodObject = [
 console.table(methodObject);
 let number = parseInt(prompt("enter a number:"));
 
-while (number != 1) {
-  console.log("Press 1 to terminate");
-  const numb = parseInt(prompt("enter a number:"));
-  if (numb === 1) {
-    number = 1;
+while (number != 0) {
+  switch (number) {
+    case 1:
+      ArrayAtDemonstation();
+      break;
   }
+
+  number = parseInt(prompt("Press 0 to terminate Or enter a number:"));
 }
